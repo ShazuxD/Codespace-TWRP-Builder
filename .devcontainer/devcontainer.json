@@ -1,0 +1,19 @@
+{
+  "name": "Codespace-TWRP-Builder",
+  "image": "docker.io/shazuxdd/twrp-builder",
+  "remoteUser": "twrp-builder",
+  "containerUser": "twrp-builder",
+  "privileged": true,
+  "capAdd": [
+    "SYS_ADMIN"
+  ],
+  "runArgs": [
+    "--device=/dev/fuse"
+  ],
+  "postStartCommand": "sudo /usr/local/bin/merge-storage",
+  "features": {
+    "ghcr.io/devcontainers/features/sshd:1": {
+      "version": "latest"
+    }
+  }
+}
