@@ -11,6 +11,8 @@
     "--device=/dev/fuse"
   ],
   "postStartCommand": "sudo /usr/local/bin/merge-storage",
+  "postStartCommand": "source config.sh"
+  "postStartCommand": "sudo /usr/local/bin/setup-swap",
   "features": {
     "ghcr.io/devcontainers/features/sshd:1": {
       "version": "latest"
