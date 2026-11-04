@@ -10,7 +10,7 @@ MANIFEST_URL="https://github.com/minimal-manifest-twrp/platform_manifest_twrp_ao
 MANIFEST_BRANCH="twrp-12.1"
 
 # DEVICE TREE
-DEVICE_TREE_URL="https://github.com/ShazuxD/device_xiaomi_pissarro-recovery"
+DEVICE_TREE_URL="https://${GH_TOKEN}@github.com/ShazuxD/device_xiaomi_pissarro-recovery"
 DEVICE_TREE_BRANCH="android-12.1"
 DEVICE_PATH="device/xiaomi/pissarro"
 
@@ -20,7 +20,11 @@ BUILD_TARGET="boot"
 
 # CCACHE
 UPLOAD_CCACHE=y
+CCACHE_URL="https://sendit.sh/XLdo1/ccache.tar.gz"
 
+# TG
+#TG_TOKEN=   # using codespace secret
+#TG_ID       # using codespace secret
 
 # DO NOT TOUCH
 ######################################################################
@@ -34,4 +38,4 @@ export ENABLE_SWAP
 export MANIFEST_URL MANIFEST_BRANCH
 export DEVICE_TREE_URL DEVICE_TREE_BRANCH DEVICE_PATH
 export MAKEFILE_NAME BUILD_TARGET
-export UPLOAD_CCACHE
+export UPLOAD_CCACHE CCACHE_URL
